@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Settle</title>
+    <!-- Il lessico è quello che i giocatori usano davvero per cercare questo
+         posizionamento (ticket 21): "cozy", "relaxing", "no timer", "no
+         pressure" — non termini da designer come "forgiving puzzle". -->
+    <meta name="description" content="A cozy block puzzle. No timer, no pressure: when you get stuck, the level settles back on its own. A new board every day." />
+    <meta name="theme-color" content="#F2EDE4" />
+    <link rel="icon" href="./icona.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Settle" />
+    <meta property="og:description" content="A cozy block puzzle. No timer, no pressure. A new board every day." />
+    <meta name="twitter:card" content="summary" />
+    <script type="module" crossorigin src="./assets/index-Mt2DDJRh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BzDRzo2C.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="c"></canvas>
+      <div id="hud">
+        <span id="level"></span>
+        <span id="corrections"></span>
+        <button id="modo" type="button"></button>
+        <button id="mute" type="button">♪</button>
+      </div>
+      <div id="hint"></div>
+      <div id="menu" hidden>
+        <div id="menu-voci"></div>
+        <div id="menu-stat"></div>
+        <div id="menu-piede">
+          <button id="menu-chiudi" type="button"></button>
+          <button id="lingua" type="button" title="language"></button>
+        </div>
+      </div>
+      <div id="esito" hidden>
+        <div id="esito-titolo"></div>
+        <pre id="artefatto"></pre>
+        <div id="esito-nota"></div>
+        <div id="esito-azioni">
+          <button id="avanti" type="button"></button>
+          <button id="riprova" type="button"></button>
+          <button id="condividi" type="button" hidden></button>
+          <button id="copia" type="button"></button>
+          <button id="torna" type="button"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

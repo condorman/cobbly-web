@@ -1,0 +1,13 @@
+{
+  "name": "Settle",
+  "short_name": "Settle",
+  "description": "A cozy block puzzle. No timer, no pressure.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2EDE4",
+  "theme_color": "#F2EDE4",
+  "icons": [
+    { "src": "./icona.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
