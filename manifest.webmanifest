@@ -1,6 +1,6 @@
 {
-  "name": "Settle",
-  "short_name": "Settle",
+  "name": "Cobbly",
+  "short_name": "Cobbly",
   "description": "A cozy block puzzle. No timer, no pressure.",
   "start_url": "./",
   "display": "standalone",
