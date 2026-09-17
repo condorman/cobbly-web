@@ -12,8 +12,8 @@
     <meta property="og:title" content="Cobbly: Cozy Block Puzzle" />
     <meta property="og:description" content="A cozy block puzzle. No timer. Every board has a smallest solution. A new board every day." />
     <meta name="twitter:card" content="summary" />
-    <script type="module" crossorigin src="./assets/index-hkxFyCRD.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BNZY2b6b.css">
+    <script type="module" crossorigin src="./assets/index-BDmm1KUa.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CmR6_U9B.css">
   </head>
   <body>
     <div id="app">
@@ -33,10 +33,15 @@
       <div id="hud">
         <span id="level"></span>
         <span id="orologio"></span>
+        <span id="oltre"></span>
         <button id="ricomincia" type="button"></button>
         <button id="indietro" type="button"></button>
       </div>
       <div id="hint"></div>
+      <div id="fuori" hidden>
+        <span id="fuori-riga"></span>
+        <button id="fuori-ricomincia" type="button"></button>
+      </div>
       <div id="schermate" hidden>
         <div id="schermi">
           <div id="schermo-oggi" class="schermo" hidden></div>
@@ -73,6 +78,7 @@
         <div id="esito-azioni">
           <button id="avanti" type="button"></button>
           <button id="riprova" type="button"></button>
+          <button id="continua" type="button"></button>
           <button id="condividi" type="button" hidden></button>
           <button id="copia" type="button"></button>
           <button id="torna" type="button"></button>
