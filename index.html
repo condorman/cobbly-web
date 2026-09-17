@@ -4,36 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Cobbly</title>
-    <meta name="description" content="A cozy block puzzle. No timer, no pressure: when you get stuck, the level settles back on its own. A new board every day." />
+    <meta name="description" content="A cozy block puzzle. No timer: every board has a smallest solution, and finding it is the game. A new board every day." />
     <meta name="theme-color" content="#F2EDE4" />
     <link rel="icon" href="./icona.svg" type="image/svg+xml" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cobbly: Cozy Block Puzzle" />
-    <meta property="og:description" content="A cozy block puzzle. No timer, no pressure. A new board every day." />
+    <meta property="og:description" content="A cozy block puzzle. No timer. Every board has a smallest solution. A new board every day." />
     <meta name="twitter:card" content="summary" />
-    <script type="module" crossorigin src="./assets/index-CXMaPwRo.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-D8INkxfZ.css">
+    <script type="module" crossorigin src="./assets/index-hkxFyCRD.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BNZY2b6b.css">
   </head>
   <body>
     <div id="app">
+      <div id="rovine" aria-hidden="true">
+        <i class="raggio a"></i><i class="raggio b"></i>
+        <i class="arcata s1"></i><i class="arcata s2"></i>
+        <i class="arcata d1"></i><i class="arcata d2"></i>
+        <i class="arcata c1"></i><i class="arcata c2"></i><i class="guglia"></i>
+        <i class="colonna s"></i><i class="capitello s"></i>
+        <i class="colonna d"></i><i class="capitello d"></i>
+        <i class="fronda s"></i><i class="fronda d"></i><i class="fronda c"></i>
+        <i class="luna"></i>
+        <i class="suolo"></i><i class="orlo"></i><i class="venatura"></i>
+        <i class="polvere"></i>
+      </div>
       <canvas id="c"></canvas>
       <div id="hud">
         <span id="level"></span>
-        <span id="corrections"></span>
         <span id="orologio"></span>
-        <button id="modo" type="button"></button>
-        <button id="mute" type="button">♪</button>
+        <button id="ricomincia" type="button"></button>
+        <button id="indietro" type="button"></button>
       </div>
       <div id="hint"></div>
-      <div id="menu" hidden>
-        <div id="menu-voci"></div>
-        <div id="menu-stat"></div>
-        <div id="menu-piede">
-          <button id="menu-chiudi" type="button"></button>
-          <button id="tema" type="button"></button>
-          <button id="lingua" type="button" title="language"></button>
+      <div id="schermate" hidden>
+        <div id="schermi">
+          <div id="schermo-oggi" class="schermo" hidden></div>
+          <div id="schermo-livelli" class="schermo" hidden></div>
+          <div id="schermo-sfida" class="schermo" hidden></div>
+          <div id="schermo-tu" class="schermo" hidden>
+            <div id="tu-voci"></div>
+            <div id="tu-interruttori">
+              <button id="tema" class="voce" type="button">
+                <span class="nome"></span><span class="dato"></span>
+              </button>
+              <button id="mute" class="voce" type="button">
+                <span class="nome"></span><span class="dato"></span>
+              </button>
+              <button id="lingua" class="voce" type="button">
+                <span class="nome"></span><span class="dato"></span>
+              </button>
+            </div>
+          </div>
         </div>
+        <nav id="tabs">
+          <button class="tab" type="button" data-rotta="oggi"></button>
+          <button class="tab" type="button" data-rotta="livelli"></button>
+          <button class="tab" type="button" data-rotta="sfida"></button>
+          <button class="tab" type="button" data-rotta="tu"></button>
+        </nav>
       </div>
       <div id="esito" hidden>
         <div id="esito-titolo"></div>
@@ -48,6 +77,13 @@
           <button id="copia" type="button"></button>
           <button id="torna" type="button"></button>
         </div>
+      </div>
+      <div id="apertura">
+        <div class="pedina"></div>
+        <div class="nome">Cobbly</div>
+        <p class="pillola"></p>
+        <div class="pietre"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="plinto"></div>
       </div>
     </div>
   </body>
